@@ -2,12 +2,4 @@
 
 .twitter
   %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet
-  %script{:src => "//platform.twitter.com/widgets.js", :type => "text/javascript"}
 
-
-%script{:type => "text/javascript"}
-  twttr.events.bind('tweet', function(event) {
-    var tweet_id = event.data.source_tweet_id;
-    var user_id = event.data.user_id;
-    $.post('/tweets', {tweet_id: tweet_id.val(), user_id: user_id.val()});
-  }); 
