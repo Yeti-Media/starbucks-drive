@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Location, "Instance Methods" do
   before do
-    @location = FactoryGirl.build(:location)
+    @location = build(:location)
   end
 
   describe ".gmaps4rails_options"  do
