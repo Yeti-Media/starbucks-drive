@@ -1,1 +1,14 @@
 %h1 welcome page
+
+.twitter
+  %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet
+  %script{:src => "//platform.twitter.com/widgets.js", :type => "text/javascript"}
+
+
+%script{:type => "text/javascript"}
+// This below function executes after successful tweet any one from this webpage 
+  twttr.events.bind('tweet', function(event){
+    var tweet_id = event.data.source_tweet_id;
+    var followed_user_id = event.data.user_id;
+
+  }); 
