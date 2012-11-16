@@ -7,6 +7,8 @@ gem 'rails', '3.2.9'
 
 gem 'mongoid'
 
+gem 'mongoid_geospatial', git: 'git://github.com/kristianmandrup/mongoid_geospatial.git'
+
 gem 'gmaps4rails'
 gem 'turbolinks'
 gem 'twitter'
@@ -52,4 +54,5 @@ group :test do
   gem 'capybara-webkit'
   gem 'headless'
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
 end

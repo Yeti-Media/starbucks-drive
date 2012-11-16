@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/kristianmandrup/mongoid_geospatial.git
+  revision: 17af8420db58ed0632edc468f9b1da8bbd18e8dd
+  specs:
+    mongoid_geospatial (2.7.1)
+      activesupport (~> 3.2)
+      mongoid (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -70,6 +78,11 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.1.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.1.0)
+      factory_girl (~> 4.1.0)
+      railties (>= 3.0.0)
     faraday (0.8.4)
       multipart-post (~> 1.1)
     ffi (1.1.5)
@@ -187,11 +200,13 @@ DEPENDENCIES
   database_cleaner
   debugger
   execjs
+  factory_girl_rails
   gmaps4rails
   haml
   headless
   jquery-rails
   mongoid
+  mongoid_geospatial!
   rails (= 3.2.9)
   rspec-rails
   sass-rails (~> 3.2.3)
