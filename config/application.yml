@@ -1,0 +1,13 @@
+defaults: &defaults
+  twitter:
+    hashtag: sbdrive
+    text: This is a placeholder text for the tweet button
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
