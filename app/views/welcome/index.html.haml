@@ -12,8 +12,14 @@
   }(document, "script", "twitter-wjs"));
   twttr.ready(function (twttr){
     twttr.events.bind('tweet', function(event) {
-    }); 
+    });
   });
 
 %div.map
   = gmaps4rails(@json)
+
+
+
+
+
+= link_to "About" , "/about.html"
