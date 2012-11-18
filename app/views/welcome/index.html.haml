@@ -15,5 +15,8 @@
     }); 
   });
 
+%div.donate
+  %a{href: "sms://#{Settings.donate.number}?body=#{Settings.donate.body}"} Donate to Spark of Love
+
 %div.map
   = gmaps4rails(@json)
