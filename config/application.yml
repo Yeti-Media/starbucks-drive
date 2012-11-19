@@ -2,6 +2,9 @@ defaults: &defaults
   twitter:
     hashtag: sbdrive
     text: This is a placeholder text for the tweet button
+  donation:
+    number: +5411133322
+    body: placeholder for the sms text
 
 development:
   <<: *defaults
