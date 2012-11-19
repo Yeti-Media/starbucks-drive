@@ -1,0 +1,15 @@
+@import "modules/constants";
+@import "modules/mixins";
+
+html {
+  height: 100%;
+  @include kill-mobile-zoom;
+  @include kill-tap-highlight;
+}
+
+body {
+  height: 100%;
+  background: $background-color;
+  font-family: $font-family;
+  padding-top: 100px;
+}

@@ -14,9 +14,13 @@
     %title Give to Spark of Love Thru Yeti Media and Starbucks
     / Included CSS Files
     = stylesheet_link_tag "application"
+    %script{:type => "text/javascript", :src => "//use.typekit.net/dnl6osb.js"}
+    %script{:type => "text/javascript"}
+      try{Typekit.load();}catch(e){}
     / Included JS Files
     :javascript
       var donut_chart_data = #{@donut_chart_data.to_json}
+    = javascript_include_tag "application"
     = yield :scripts
     = csrf_meta_tags
   %body
