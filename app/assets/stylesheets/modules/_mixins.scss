@@ -1,0 +1,31 @@
+ @mixin responsive-sass ($type, $width) {
+ 	@media only screen and ($type: $width) {
+    @content
+ 	}
+ }
+
+@mixin high-res {
+/* Retina display and other high pixel ratio devices ----------- */
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-device-pixel-ratio: 2) {
+    @content
+  }
+}
+
+@mixin kill-mobile-zoom {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+}
+
+@mixin kill-tap-highlight {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@mixin background-size ($width, $height) {
+    -webkit-background-size: $width $height;
+    -moz-background-size: $width $height;
+    -o-background-size: $width $height;
+    background-size: $width $height;
+}
