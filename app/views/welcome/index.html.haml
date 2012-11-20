@@ -3,17 +3,6 @@
   .twitter
     %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet
 
-  :javascript
-    window.twttr = (function (d,s,id) {
-      var t, js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
-      js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
-      return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
-    }(document, "script", "twitter-wjs"));
-    twttr.ready(function (twttr){
-      twttr.events.bind('tweet', function(event) {
-      });
-    });
 
   %div.donate
     %a{href: "sms://#{Settings.donation.number}?body=#{Settings.donation.body}"} Donate to Spark of Love
@@ -25,3 +14,6 @@
   #donut_chart
 
   = link_to "About" , "/about.html"
+
+
+= javascript_include_tag 'welcome.js'
