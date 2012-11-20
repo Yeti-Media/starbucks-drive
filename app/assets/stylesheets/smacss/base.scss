@@ -9,7 +9,16 @@ html {
 
 body {
   height: 100%;
-  background: $background-color;
+  background: transparent url(image-path("redbg400pixelsq.jpg"));
+  color: $font-color;
   font-family: $font-family;
-  padding-top: 100px;
+  padding-top: 50px;
+}
+
+.xl-type { font-size: 60px; }
+
+.large { font-size: 30px; }
+
+.bold {
+    font-weight: bold;
 }
