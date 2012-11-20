@@ -17,3 +17,4 @@
 //= require_directory ./gmaps4rails
 //= require raphael-min
 //= require morris.min
+//= require welcome
