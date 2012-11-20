@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require_tree .
+//= require donut_chart
+//= require_directory ./gmaps4rails
+//= require raphael-min
+//= require morris.min
+//= require welcome
