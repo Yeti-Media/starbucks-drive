@@ -1,7 +1,10 @@
-
-.row.tweleve.columns
-  .twitter
-    %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet
+.row
+  .seven.columns.centered.l-spark-logo
+    = image_tag "SPARK-OF-LOVE-LOGO-2012.PNG"
+.row
+  .one.column.centered
+    .twitter
+      %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet
 
   :javascript
     window.twttr = (function (d,s,id) {
@@ -17,9 +20,10 @@
 
   %div.donate
     %a{href: "sms://#{Settings.donation.number}?body=#{Settings.donation.body}"} Donate to Spark of Love
-
-  %div.map
-    = gmaps4rails(@json)
+.row
+  .seven.columns.centered
+    %div.map
+      = gmaps4rails(@json)
 
 
   #donut_chart
