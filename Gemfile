@@ -6,8 +6,12 @@ gem 'rails', '3.2.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mongoid'
-
 gem 'mongoid_geospatial', git: 'git://github.com/kristianmandrup/mongoid_geospatial.git'
+
+#cache
+gem 'redis-rails'
+gem 'redis-store'
+
 
 gem 'gmaps4rails'
 gem 'turbolinks'
