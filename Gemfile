@@ -37,7 +37,7 @@ end
 gem 'jquery-rails'
 
 group :staging, :production do
-  gem 'thin'
+  gem 'unicorn'
 end
 
 group :development do
