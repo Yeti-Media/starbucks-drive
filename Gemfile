@@ -14,6 +14,7 @@ gem 'settingslogic'
 #cache
 gem 'redis-rails'
 gem 'redis-store'
+gem 'geocoder'
 
 gem 'newrelic_rpm'
 

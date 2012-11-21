@@ -1,5 +1,7 @@
 @import "modules/constants";
 @import "modules/mixins";
+@import "compass/css3";
+
 
 html {
   height: 100%;
@@ -12,13 +14,45 @@ body {
   background: transparent url(image-path("redbg400pixelsq.jpg"));
   color: $font-color;
   font-family: $font-family;
+  font-size: 16px;
   padding-top: 50px;
 }
 
 .xl-type { font-size: 60px; }
 
-.large { font-size: 30px; }
+.large { font-size: 30px !important; }
 
 .bold {
     font-weight: bold;
+}
+
+.opacity-100 {
+	@include opacity(100);
+}
+.opacity-96 {
+  @include opacity(0.96);
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+.opacity-0 {
+  display: hidden;
+	@include opacity(0);
+}
+
+p {
+	font-size: 16px;
+	line-height: 2;
+}
+
+.boxshadow {
+  @include box-shadow(rgba(black, 0.4) 0 0 25px, rgba(gray, 0.2) 0 0 3px 1px inset);
+}
+
+.show-duration-easein {
+  @include transition-property(opacity);
+  @include transition-duration(2s);
+  @include transition-timing-function(ease-in); 
 }
