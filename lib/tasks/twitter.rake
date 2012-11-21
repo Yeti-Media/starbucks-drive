@@ -10,11 +10,13 @@ namespace :twitter do
 
   desc "should pick random tweet"
   task :pick_winner => :environment do
-    eligible = Tweet.where(won?: false)
-    t = eligible.skip(rand(eligible.count)).limit(1).first
-    # how much will this cost?
-    # I mean, how many documents do we estimate to have? Maybe this will be very slow
-    
+    3.times do
+      eligible = Tweet.where(won: false)
+      t = eligible.skip(rand(eligible.count)).limit(1).first
+      t.won = true
+      t.save
+      p 'Winner --- ' + t.user
+    end    
   end
 
 end
