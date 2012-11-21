@@ -2,19 +2,26 @@ class Location
   include Gmaps4rails::ActsAsGmappable
   include Mongoid::Document
   include Mongoid::Geospatial
+  include Geocoder::Model::Mongoid
+
+  geocoded_by :full_location
 
   field :coords,  type: Point, spatial: {lat: :latitude, lng: :longitude, return_array: true }
 
   field :address, type: String
+  field :name, type: String
+  field :zip_code, type: String
+  field :store_id, type: Integer
+  field :city, type: String
+  field :state, type: String
+  field :phone_number , type: String
 
   acts_as_gmappable
 
-  embeds_many :toy_groups
-
-  validates :coords, presence: true
-  validates :address , presence: true
+  embeds_many :toy_groups, cascade_callbacks: true
 
   before_create :add_toy_groups
+  before_validation :geocode, if: lambda{|r| r.address.present?}
 
   def self.chart_data
     result = []
@@ -47,9 +54,23 @@ class Location
     {position: :coords}
   end
 
+  def coordinates
+    coords
+  end
+
+  def coordinates=(value)
+    self.coords = value
+  end
+
+  def full_location
+    [address, city, state].join(', ')
+  end
+
   def add_toy_groups
     4.times do |t|
-      toy_groups << ToyGroup.new(group_id: t)
+      toy_group = ToyGroup.new(group_id: t)
+      toy_group.add_initial_amount
+      toy_groups << toy_group
     end
   end
 
