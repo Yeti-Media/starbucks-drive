@@ -2,21 +2,38 @@
   .seven.columns.centered.l-spark-logo
     = image_tag "SPARK-OF-LOVE-LOGO-2012.PNG"
 .row
-  .one.column.centered
-    .twitter
-      %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet
-
-
-  %div.donate
-    %a{href: "sms://#{Settings.donation.number}?body=#{Settings.donation.body}"} Donate to Spark of Love
-.row
   .seven.columns.centered
-    %div.map
-      = gmaps4rails(@json)
+    %dl.tabs.mobile
+      %dd.active
+        %a.large{:href => "#toys"} Toys needed?
+      %dd
+        %a#map_show.large{:href => "#maptab"} Drop off locations
+    %ul.tabs-content
+      %li#toysTab.active
+        %div.donate
+          %p We currently need more Toys for:
+          .xl-type Kids ages 13 - 17
+          %p Current toys collected?
+          #donut_chart
+      %li#maptabTab
 
 
-  #donut_chart
-
+.row
+  .seven.column.centered.panel.boxshadow
+    %p 
+      With every new, unwrapped toy, or sports equipment valued at $10 or more you will receive
+      one free Verismo latte.* 
+    %small *At participating Starbucks locations.
+.row
+  .seven.column.centered.panel.boxshadow
+    %p 
+      Tweet that "You've Donated" with the hash tag #TeamSpark and 
+      follow @yeti_media to be entered to win a free Starbucks Gift card.
+    .twitter
+      %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet to Win
   = link_to "About" , "/about.html"
 
 
+.map.l-map-top-of-page.opacity-0
+  = gmaps4rails(@json)
+  %p Drop off your new, unwrapped toys or sports equipment at one of your local Starbucks, located on the map above.
