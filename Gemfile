@@ -9,21 +9,23 @@ gem 'rails', '3.2.9'
 
 gem 'mongoid'
 gem 'mongoid_geospatial', git: 'git://github.com/kristianmandrup/mongoid_geospatial.git'
+gem 'settingslogic'
 
 #cache
 gem 'redis-rails'
 gem 'redis-store'
 
+gem 'newrelic_rpm'
 
 gem 'gmaps4rails'
-gem 'turbolinks'
 gem 'twitter'
+
+gem 'turbolinks'
 gem 'haml'
-gem 'settingslogic'
+gem 'jquery-rails'
 
 gem 'execjs'
 gem 'therubyracer'
-gem 'twitter'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -35,7 +37,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
 
 group :staging, :production do
   gem 'unicorn'

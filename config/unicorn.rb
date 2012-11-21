@@ -8,4 +8,5 @@ before_fork do |server, worker|
 end
 
 after_fork do |server, worker|
+  ::NewRelic::Agent.after_fork(:force_reconnect => true) if defined? Unicorn
 end
