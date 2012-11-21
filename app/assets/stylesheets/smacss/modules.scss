@@ -1,3 +1,7 @@
 .tabs dd.active, .tabs li.active {
 	border-top: 5px solid red;
 }
+
+.tabs.mobile dd:first-child, .tabs.mobile li:first-child {
+	padding-left: 0px !important;
+}

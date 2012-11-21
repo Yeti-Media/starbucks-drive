@@ -5,7 +5,7 @@
   .seven.columns.centered
     %dl.tabs.mobile
       %dd.active
-        %a.large{:href => "#toys"} Toys needed?
+        %a#toys_show.large{:href => "#toys"} Toys needed?
       %dd
         %a#map_show.large{:href => "#maptab"} Drop off locations
     %ul.tabs-content
@@ -19,7 +19,7 @@
 
 
 .row
-  .seven.column.centered.panel.boxshadow
+  .seven.column.centered.panel.boxshadow.opacity-96
     %p 
       With every new, unwrapped toy, or sports equipment valued at $10 or more you will receive
       one free Verismo latte.* 
@@ -36,4 +36,4 @@
 
 .map.l-map-top-of-page.opacity-0
   = gmaps4rails(@json)
-  %p Drop off your new, unwrapped toys or sports equipment at one of your local Starbucks, located on the map above.
+  %p.margin-bottom-40 Drop off your new, unwrapped toys or sports equipment at one of your local Starbucks, located on the map above.
