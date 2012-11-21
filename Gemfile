@@ -1,13 +1,19 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
+
 gem 'rails', '3.2.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mongoid'
-
 gem 'mongoid_geospatial', git: 'git://github.com/kristianmandrup/mongoid_geospatial.git'
+
+#cache
+gem 'redis-rails'
+gem 'redis-store'
+
 
 gem 'gmaps4rails'
 gem 'turbolinks'
@@ -17,6 +23,7 @@ gem 'settingslogic'
 
 gem 'execjs'
 gem 'therubyracer'
+gem 'twitter'
 
 # Gems used only for assets and not required
 # in production environments by default.
