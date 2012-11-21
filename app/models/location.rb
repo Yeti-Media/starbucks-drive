@@ -1,12 +1,11 @@
 class Location
   include Gmaps4rails::ActsAsGmappable
   include Mongoid::Document
-  include Mongoid::Geospatial
   include Geocoder::Model::Mongoid
 
   geocoded_by :full_location
 
-  field :coords,  type: Point, spatial: {lat: :latitude, lng: :longitude, return_array: true }
+  field :coords,  type: Array, default: [0,0]
 
   field :address, type: String
   field :name, type: String
@@ -16,7 +15,9 @@ class Location
   field :state, type: String
   field :phone_number , type: String
 
-  acts_as_gmappable
+  acts_as_gmappable position: :coords
+
+  index({ coords: "2d" }, { min: -200, max: 200 })
 
   embeds_many :toy_groups, cascade_callbacks: true
 
