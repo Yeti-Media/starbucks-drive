@@ -2,7 +2,8 @@
 //= require jquery_ujs
 //= require foundation
 //= require donut_chart
-//= require_directory ./gmaps4rails
+//= require ./gmaps4rails/gmaps4rails.base.js.coffee
+//= require ./gmaps4rails/gmaps4rails.googlemaps.js.coffee
 //= require raphael-min
 //= require morris.min
 //= require welcome

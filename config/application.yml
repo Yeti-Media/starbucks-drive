@@ -5,6 +5,8 @@ defaults: &defaults
   donation:
     number: +5411133322
     body: placeholder for the sms text
+  maps:
+    key: AIzaSyAS1bT4_6kSQvmuMqPdAdHD4Z6Au6fZ-PQ
 
 development:
   <<: *defaults
@@ -14,3 +16,5 @@ test:
 
 production:
   <<: *defaults
+  maps:
+    key: AIzaSyAHYUT0AlR_540CT87nFPg5YEIM8bzzrV4

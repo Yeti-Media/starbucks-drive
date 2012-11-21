@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
 
 
   def index
-    @json = Location.all.to_gmaps4rails
+    @json = Location.where(:coords.ne => [0,0]).all.to_gmaps4rails
     @donut_chart_data = Location.chart_data
   end
 end

@@ -3,7 +3,7 @@ class Location
   include Mongoid::Document
   include Geocoder::Model::Mongoid
 
-  geocoded_by :full_location
+  geocoded_by :full_location, coordinates: :coords
 
   field :coords,  type: Array, default: [0,0]
 
@@ -48,19 +48,11 @@ class Location
   end
 
   def gmaps4rails_infowindow
-    "#{address}"
+    full_location
   end
 
-  def gmaps4rails_options
-    {position: :coords}
-  end
-
-  def coordinates
-    coords
-  end
-
-  def coordinates=(value)
-    self.coords = value
+  def coords
+    read_attribute(:coords).reverse
   end
 
   def full_location
