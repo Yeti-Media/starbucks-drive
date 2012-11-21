@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+
 describe ToyGroup, "InstanceMethods" do
   before do
     @toy_group = build(:toy_group)
