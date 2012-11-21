@@ -13,6 +13,7 @@ gem 'mongoid_geospatial', git: 'git://github.com/kristianmandrup/mongoid_geospat
 #cache
 gem 'redis-rails'
 gem 'redis-store'
+gem 'geocoder'
 
 
 gem 'gmaps4rails'
