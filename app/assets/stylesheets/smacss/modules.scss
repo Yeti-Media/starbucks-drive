@@ -5,3 +5,12 @@
 .tabs.mobile dd:first-child, .tabs.mobile li:first-child {
 	padding-left: 0px !important;
 }
+
+.chart {
+	height: 230px;
+	width: 230px;
+}
+
+.map img, object, embed { 
+	max-width: none; 
+}

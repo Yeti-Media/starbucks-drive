@@ -14,7 +14,7 @@ body {
   background: transparent url(image-path("redbg400pixelsq.jpg"));
   color: $font-color;
   font-family: $font-family;
-  font-size: 16px;
+  font-size: 18px;
   padding-top: 50px;
 }
 
@@ -43,8 +43,8 @@ body {
 }
 
 p {
-	font-size: 16px;
-	line-height: 2;
+	font-size: 20px;
+	line-height: 1.444;
 }
 
 .boxshadow {
