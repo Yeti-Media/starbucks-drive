@@ -6,18 +6,11 @@
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  padding-top: 210px;
   @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
-}
-
-.l-spark-logo {
-  background: transparent url(image-path("SPARK-OF-LOVE-LOGO-2012.PNG")) no-repeat center;
-  height: 229px;
-  padding-bottom: 50px;
-  @include background-size(570px, 229px)
 }
 
 .l-map-top-of-page {
   position: absolute;
-  top: 0;
+  top: -500px;
+
 }

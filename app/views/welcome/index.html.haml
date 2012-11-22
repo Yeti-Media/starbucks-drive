@@ -1,5 +1,6 @@
 .row.margin-0
   .seven.columns.centered.l-spark-logo
+    = image_tag "SPARK-OF-LOVE-LOGO-2012.PNG"
 
 .row.margin-0
   .seven.columns.centered
@@ -15,7 +16,7 @@
             %p We currently need more Toys for:
             .xl-type Kids ages 13 - 17
         .row
-          .five.columns
+          .five.columns.bg-color
             %p Current toys collected grouped by age:
           .seven.columns.panel.boxshadow
             #donut_chart.chart
@@ -40,6 +41,6 @@
 
 .map.l-map-top-of-page.opacity-0
   = gmaps("markers" => {"data" => @json}, "map_options" => { "provider" => "google", "provider_key" => Settings.maps.key,"center_on_user" => true })
-  %p.margin-bottom-40.mobile-four
+  %p.margin-bottom-40.mobile-four.bg-color
     Drop off your new, unwrapped toys or sports equipment at 
     a Starbucks near you.

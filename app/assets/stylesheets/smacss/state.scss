@@ -4,26 +4,39 @@
 	body {padding-top: 0}
 	.l-container {
     background-image: url(image-path("wishlist@2x.jpeg"));
-    padding-top: 70px;
+    padding-top: 100px;
 	  @include background-size(320px, 480px);
   }
-  .l-spark-logo {
-    height: 150px;
-    width: 319px !important;
-    @include background-size(280px, 117px);
-  }
-  // .gmaps4rails_map {
-  //   width: 310px;
-  //   height: 100px;
-  // }
-
 }
 
-// @include responsive-sass(max-width, 480px) {
-// 	.l-container { background-image: url(image-path("wishlist@2x.jpeg")); }
-// 	@include background-size(480px, auto);
-// }
+@include responsive-sass(min-width, 480px) {
+  body {padding-top: 0}
+	.l-container {
+    padding-top: 165px;
+    background-image: url(image-path("wishlist@2x.jpeg"));
+	  @include background-size(480px, auto);
+  }
+}
 
-.row .mobile-four:last-child {
-  // float: none !important;
+@include responsive-sass(min-width, 768px) {
+  body {padding-top: 50px}
+  .l-container {
+    padding-top: 210px;
+    background-image: url(image-path("desktop1040elfwishlist.jpeg"));
+    @include background-size(auto, auto);
+  }
+  .map_container {
+    width: 571px;
+  }
+}
+
+@include iphone5-landscape {
+  .l-container {
+    padding-top: 200px;
+    background-image: url(image-path("wishlist@2x.jpeg"));
+    @include background-size(100%, auto);
+  }
+  .bg-color {
+    background-color: #9acd68;
+  }
 }
