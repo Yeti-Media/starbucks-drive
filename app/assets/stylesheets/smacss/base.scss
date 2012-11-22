@@ -10,6 +10,7 @@ html {
 }
 
 body {
+    overflow-x: hidden;
   height: 100%;
   background: transparent url(image-path("redbg400pixelsq.jpg"));
   color: $font-color;
@@ -24,6 +25,10 @@ body {
 
 .bold {
     font-weight: bold;
+}
+
+small {
+  font-size: 12px !important;
 }
 
 .opacity-100 {
@@ -55,4 +60,8 @@ p {
   @include transition-property(opacity);
   @include transition-duration(2s);
   @include transition-timing-function(ease-in); 
+}
+
+.margin-0 {
+  margin: 0 !important;
 }

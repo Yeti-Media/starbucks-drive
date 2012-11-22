@@ -1,7 +1,7 @@
  @mixin responsive-sass ($type, $width) {
- 	@media only screen and ($type: $width) {
+  @media only screen and ($type: $width) {
     @content
- 	}
+  }
  }
 
 @mixin high-res {
@@ -11,6 +11,12 @@
   only screen and (-o-min-device-pixel-ratio: 3/2),
   only screen and (min-device-pixel-ratio: 2) {
     @content
+  }
+}
+
+@mixin iphone5 {
+  @media only screen and (min-device-width: 640px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+   @content
   }
 }
 

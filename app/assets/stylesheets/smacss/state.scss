@@ -1,0 +1,29 @@
+@import "modules/mixins";
+
+@include responsive-sass(max-width, 479px) {
+	body {padding-top: 0}
+	.l-container {
+    background-image: url(image-path("wishlist@2x.jpeg"));
+    padding-top: 70px;
+	  @include background-size(320px, 480px);
+  }
+  .l-spark-logo {
+    height: 150px;
+    width: 319px !important;
+    @include background-size(280px, 117px);
+  }
+  // .gmaps4rails_map {
+  //   width: 310px;
+  //   height: 100px;
+  // }
+
+}
+
+// @include responsive-sass(max-width, 480px) {
+// 	.l-container { background-image: url(image-path("wishlist@2x.jpeg")); }
+// 	@include background-size(480px, auto);
+// }
+
+.row .mobile-four:last-child {
+  // float: none !important;
+}

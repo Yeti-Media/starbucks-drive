@@ -1,7 +1,7 @@
-.row
+.row.margin-0
   .seven.columns.centered.l-spark-logo
-    = image_tag "SPARK-OF-LOVE-LOGO-2012.PNG"
-.row
+
+.row.margin-0
   .seven.columns.centered
     %dl.tabs.mobile
       %dd.active
@@ -10,31 +10,36 @@
         %a#map_show.large{:href => "#maptab"} Drop off locations
     %ul.tabs-content
       %li#toysTab.active
-        %div.donate
-          %p We currently need more Toys for:
-          .xl-type Kids ages 13 - 17
+        .row
+          %div.donate.panel.boxshadow.opacity-96
+            %p We currently need more Toys for:
+            .xl-type Kids ages 13 - 17
         .row
           .five.columns
-            %p Current toys collected:
-          .seven.columns
+            %p Current toys collected grouped by age:
+          .seven.columns.panel.boxshadow
             #donut_chart.chart
       %li#maptabTab
-.row
+        .row
+.row.margin-0
   .seven.column.centered.panel.boxshadow.opacity-96
     %p
       With every new, unwrapped toy, or sports equipment valued at $10 or more you will receive
       one free Verismo latte.*
     %small *At participating Starbucks locations.
-.row
-  .seven.column.centered.panel.boxshadow
+.row.margin-0
+  .seven.column.centered.panel.boxshadow.mobile-four
     %p
       Tweet that "You've Donated" with the hash tag #TeamSpark and
       follow @yeti_media to be entered to win a free Starbucks Gift card.
     .twitter
       %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet to Win
-= link_to "About" , "/about.html"
+.row.margin-0
+  = link_to "About this campaign" , "/about.html", :class => "button"
 
 
 .map.l-map-top-of-page.opacity-0
   = gmaps("markers" => {"data" => @json}, "map_options" => { "provider" => "google", "provider_key" => Settings.maps.key,"center_on_user" => true })
-  %p.margin-bottom-40 Drop off your new, unwrapped toys or sports equipment at one of your local Starbucks, located on the map above.
+  %p.margin-bottom-40.mobile-four
+    Drop off your new, unwrapped toys or sports equipment at 
+    a Starbucks near you.

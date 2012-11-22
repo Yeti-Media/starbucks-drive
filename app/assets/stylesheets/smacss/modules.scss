@@ -6,11 +6,16 @@
 	padding-left: 0px !important;
 }
 
+.tabs {
+	margin-top: 50px;
+}
+
 .chart {
 	height: 230px;
 	width: 230px;
 }
 
-.map img, object, embed { 
+.map img, object, embed {
+	overflow-x: hidden;
 	max-width: none; 
 }
