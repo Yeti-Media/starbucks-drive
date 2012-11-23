@@ -5,3 +5,21 @@
 .tabs.mobile dd:first-child, .tabs.mobile li:first-child {
 	padding-left: 0px !important;
 }
+
+.tabs {
+	margin-top: 50px;
+}
+
+.chart {
+	height: 230px;
+	width: 230px;
+}
+
+.map img, object, embed {
+	overflow-x: hidden;
+	max-width: none; 
+}
+
+.about-button .button {
+  width: 100%;
+}

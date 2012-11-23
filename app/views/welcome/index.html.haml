@@ -1,7 +1,8 @@
-.row
+.row.margin-0
   .seven.columns.centered.l-spark-logo
     = image_tag "SPARK-OF-LOVE-LOGO-2012.PNG"
-.row
+
+.row.margin-0
   .seven.columns.centered
     %dl.tabs.mobile
       %dd.active
@@ -10,28 +11,55 @@
         %a#map_show.large{:href => "#maptab"} Drop off locations
     %ul.tabs-content
       %li#toysTab.active
-        %div.donate
-          %p We currently need more Toys for:
-          .xl-type Kids ages 13 - 17
-          %p Current toys collected:
-          #donut_chart
+        .row
+          %div.donate.panel.boxshadow.opacity-96
+            %p We currently need more Toys for:
+            .xl-type Kids ages 13 - 17
+        .row
+          .five.columns.bg-color
+            %p Current toys collected grouped by age:
+          .seven.columns.panel.boxshadow
+            #donut_chart.chart
       %li#maptabTab
-.row
+        .row
+.row.margin-0
   .seven.column.centered.panel.boxshadow.opacity-96
     %p
       With every new, unwrapped toy, or sports equipment valued at $10 or more you will receive
       one free Verismo latte.*
     %small *At participating Starbucks locations.
-.row
-  .seven.column.centered.panel.boxshadow
+.row.margin-0
+  .seven.column.centered.panel.boxshadow.mobile-four
     %p
       Tweet that "You've Donated" with the hash tag #TeamSpark and
       follow @yeti_media to be entered to win a free Starbucks Gift card.
     .twitter
       %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet to Win
-= link_to "About" , "/about.html"
+.row.margin-0.about-button
+  = link_to "About this campaign" , "#", "data-reveal-id" => "aboutModal", :class => "button"
+.row.margin-0.about-button
+  = link_to "Rules", "#", "data-reveal-id" => "termsModal", :class => "button success"
 
 
 .map.l-map-top-of-page.opacity-0
   = gmaps("markers" => {"data" => @json}, "map_options" => { "provider" => "google", "provider_key" => Settings.maps.key,"center_on_user" => true })
-  %p.margin-bottom-40 Drop off your new, unwrapped toys or sports equipment at one of your local Starbucks, located on the map above.
+  %p.margin-bottom-40.mobile-four.bg-color
+    Drop off your new, unwrapped toys or sports equipment at 
+    a Starbucks near you.
+
+#termsModal.reveal-modal
+  .large OFFICIAL RULES
+  %p
+    NO PURCHASE NECESSARY TO ENTER OR WIN. PURCHASE WILL NOT INCREASE YOUR CHANCES OF WINNING. Yeti Media Promotion Sweepstakes (Sweepstakes) and these official rules are governed, construed and interpreted under the laws of the United States. Open and offered only to legal residents of the California who are eighteen (18) years of age and older at time of entry. Employees and their immediate families of Yeti Media and Starbucks its respective Internet, product and service providers, and their respective parent companies, trustees, subsidiaries, franchisees, affiliates, licensees, directors, officers, employees, agents, independent contractors and advertising and promotion agencies (collectively, the Sweepstakes Entities) are not eligible to enter this Sweepstakes. All federal, state, local laws and regulations apply. Void outside of the United States and DC, and where prohibited, taxed, licensed or restricted by law.
+  %p
+    PROMOTION PERIOD. This Sweepstakes begins at 12:00pm PACIFIC STANDARD TIME (PST) on Nov 22, 2012 and ends at 12:00pm (PST) on Dec 25, 2012 (Sweepstakes Period). This sweepstakes is sponsored and administered by Yeti Media.Participants agree to be bound by these official rules and the final decision of Yeti Media.
+  %p
+    HOW TO ENTER. Enter on-line only by accessing the page on the World Wide Web at http://givethruyeti.com during the Sweepstakes Period. Limit one (1) entry per person/twittter account. Yeti Media's computer will be the official time clock for the Sweepstakes. Any attempt by any person to obtain more than the stated number of entries by using multiple/different twitter or wireless accounts or any other methods will void all of that persons entries and that person will be disqualified.
+  %p
+    ALL ENTRIES MUST BE RECEIVED BY NO LATER THAN 12:00 PM (PST) ON Dec 25, 2012.
+  %p
+    DRAWING. Winners will be randomly selected from all eligible entries received. The random draw will be held on or about DEC 29th, 2012 at or around 12:00pm (PST). Odds of being randomly selected are determined by the number of eligible entries received during the Sweepstakes Period. Only one (1) entry per person/twittter account.
+  %a.close-reveal-modal &#215;
+
+#aboutModal.reveal-modal
+  = render "about"

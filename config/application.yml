@@ -1,7 +1,7 @@
 defaults: &defaults
   twitter:
     hashtag: TeamSpark
-    text: I donated new unwrapped toy to Spark of Love and got a free Verismo latte. Donate at a @starbucks store near you http://givethruyeti.com
+    text: I donated new unwrapped toy to Spark of Love and got a free Verismo latte. Find a @starbucks store near you http://givethruyeti.com
   donation:
     number: +5411133322
     body: placeholder for the sms text

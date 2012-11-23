@@ -10,20 +10,25 @@ html {
 }
 
 body {
+    overflow-x: hidden;
   height: 100%;
   background: transparent url(image-path("redbg400pixelsq.jpg"));
   color: $font-color;
   font-family: $font-family;
-  font-size: 16px;
+  font-size: 18px;
   padding-top: 50px;
 }
 
-.xl-type { font-size: 60px; }
+.xl-type { font-size: 400%; }
 
 .large { font-size: 30px !important; }
 
 .bold {
     font-weight: bold;
+}
+
+small {
+  font-size: 12px !important;
 }
 
 .opacity-100 {
@@ -43,8 +48,8 @@ body {
 }
 
 p {
-	font-size: 16px;
-	line-height: 2;
+	font-size: 20px;
+	line-height: 1.444;
 }
 
 .boxshadow {
@@ -55,4 +60,8 @@ p {
   @include transition-property(opacity);
   @include transition-duration(2s);
   @include transition-timing-function(ease-in); 
+}
+
+.margin-0 {
+  margin: 0 !important;
 }
