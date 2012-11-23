@@ -37,6 +37,8 @@
       %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet to Win
 .row.margin-0.about-button
   = link_to "About this campaign" , "/about.html", :class => "button"
+.row.margin-0.about-button
+  = link_to "Rules", "#", "data-reveal-id" => "termsModel", :class => "button success"
 
 
 .map.l-map-top-of-page.opacity-0
@@ -44,3 +46,19 @@
   %p.margin-bottom-40.mobile-four.bg-color
     Drop off your new, unwrapped toys or sports equipment at 
     a Starbucks near you.
+
+#termsModel.reveal-modal
+  .large OFFICIAL RULES
+  %p
+    NO PURCHASE NECESSARY TO ENTER OR WIN. PURCHASE WILL NOT INCREASE YOUR CHANCES OF WINNING. Yeti Media Promotion Sweepstakes (Sweepstakes) and these official rules are governed, construed and interpreted under the laws of the United States. Open and offered only to legal residents of the California who are eighteen (18) years of age and older (or for residents of Alabama and Nebraska, 19 years of age or older) at time of entry. Employees and their immediate families of Yeti Media and Starbucks its respective Internet, product and service providers, and their respective parent companies, trustees, subsidiaries, franchisees, affiliates, licensees, directors, officers, employees, agents, independent contractors and advertising and promotion agencies (collectively, the Sweepstakes Entities) are not eligible to enter this Sweepstakes. All federal, state, local laws and regulations apply. Void outside of the United States and DC, and where prohibited, taxed, licensed or restricted by law.
+  %p
+    PROMOTION PERIOD. This Sweepstakes begins at 12:00pm PACIFIC STANDARD TIME (PST) on Nov 22, 2012 and ends at 12:00pm (PST) on Dec 25, 2012 (Sweepstakes Period). This sweepstakes is sponsored and administered by Yeti Media.Participants agree to be bound by these official rules and the final decision of Yeti Media.
+  %p
+    HOW TO ENTER. Enter on-line only by accessing the page on the World Wide Web at http://givethruyeti.com during the Sweepstakes Period. Limit one (1) entry per person/twittter account. Yeti Media's computer will be the official time clock for the Sweepstakes. Any attempt by any person to obtain more than the stated number of entries by using multiple/different twitter or wireless accounts or any other methods will void all of that persons entries and that person will be disqualified.
+  %p
+    ALL ENTRIES MUST BE RECEIVED BY NO LATER THAN 12:00 PM (PST) ON Dec 25, 2012.
+  %p
+    DRAWING. Winners will be randomly selected from all eligible entries received. The random draw will be held on or about DEC 29th, 2012 at or around 12:00pm (PST). Odds of being randomly selected are determined by the number of eligible entries received during the Sweepstakes Period. Only one (1) entry per person/twittter account.
+  %a.close-reveal-modal &#215;
+
+
