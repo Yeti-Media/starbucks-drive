@@ -1,20 +1,20 @@
 @import "modules/mixins";
 
 @include responsive-sass(max-width, 479px) {
-	body {padding-top: 0}
-	.l-container {
+  body {padding-top: 0}
+  .l-container {
     background-image: url(image-path("wishlist@2x.jpeg"));
     padding-top: 100px;
-	  @include background-size(320px, 480px);
+    @include background-size(320px, 480px);
   }
 }
 
 @include responsive-sass(min-width, 480px) {
   body {padding-top: 0}
-	.l-container {
+  .l-container {
     padding-top: 165px;
     background-image: url(image-path("wishlist@2x.jpeg"));
-	  @include background-size(480px, auto);
+    @include background-size(480px, auto);
   }
 }
 
@@ -38,5 +38,30 @@
   }
   .bg-color {
     background-color: #9acd68;
+  }
+}
+
+@include ipad-landscape {
+  .row {margin: 0}
+  .l-container {
+    padding-top: 200px;
+    background-image: url(image-path("desktop1040elfwishlist.jpeg"));
+    @include background-size(100%, auto);
+  }
+  .bg-color {
+    background-color: transparent !important;
+  }
+}
+
+@include ipad-portrait {
+  .row .row {margin: 0}
+  .seven {
+    width: 83.33333% !important;
+  }
+  .tabs-content .seven {
+    width: 58% !important;
+  }
+  .about-button .button {
+    width: 100%;
   }
 }
