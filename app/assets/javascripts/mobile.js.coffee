@@ -6,4 +6,3 @@ $ ->
 	else
 		$('.gmaps4rails_map').width('100%').height('210px')
 		$('.map > p').removeClass('margin-bottom-40')
-		console.log ("called")
