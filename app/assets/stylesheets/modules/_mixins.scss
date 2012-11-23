@@ -1,7 +1,7 @@
  @mixin responsive-sass ($type, $width) {
- 	@media only screen and ($type: $width) {
+  @media only screen and ($type: $width) {
     @content
- 	}
+  }
  }
 
 @mixin high-res {
@@ -11,6 +11,24 @@
   only screen and (-o-min-device-pixel-ratio: 3/2),
   only screen and (min-device-pixel-ratio: 2) {
     @content
+  }
+}
+
+@mixin iphone5-landscape {
+   @media only screen and (min-width: 560px) and (max-device-width: 1136px) and (orientation:landscape) {
+    @content
+   }
+}
+
+@mixin ipad-landscape {
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape){
+    @content;
+  }
+}
+
+@mixin ipad-portrait {
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+    @content;
   }
 }
 

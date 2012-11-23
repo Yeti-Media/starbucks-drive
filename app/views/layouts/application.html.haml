@@ -10,7 +10,12 @@
     / Uncomment to make IE8 render like IE7
     / <meta http-equiv="X-UA-Compatible" content="IE=7" />
     / Set the viewport width to device width for mobile
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{content: "True", name: "HandheldFriendly"}/
+    %meta{content: "320", name: "MobileOptimized"}/
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0", name: "viewport"}/
+    %meta{name: "apple-mobile-web-app-capable", content: "yes"}/
+    %meta{name: "apple-mobile-web-app-status-bar-style", content: "black-translucent"}/
+    %meta{content: "on", "http-equiv" => "cleartype"}/
     %title Give to Spark of Love Thru Yeti Media and Starbucks
     / Included CSS Files
     = stylesheet_link_tag "application"

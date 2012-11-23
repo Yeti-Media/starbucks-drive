@@ -8,3 +8,5 @@
 //= require morris.min
 //= require welcome
 //= require map
+//= require detect-mobile
+//= require mobile
