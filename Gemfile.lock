@@ -250,7 +250,7 @@ DEPENDENCIES
   headless
   jquery-rails
   launchy
-  mongoid
+  mongoid (~> 3.0.9)
   mongoid_geospatial!
   newrelic_rpm
   pronghorn
