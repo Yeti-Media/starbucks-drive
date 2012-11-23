@@ -36,9 +36,9 @@
     .twitter
       %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet to Win
 .row.margin-0.about-button
-  = link_to "About this campaign" , "/about.html", :class => "button"
+  = link_to "About this campaign" , "#", "data-reveal-id" => "aboutModal", :class => "button"
 .row.margin-0.about-button
-  = link_to "Rules", "#", "data-reveal-id" => "termsModel", :class => "button success"
+  = link_to "Rules", "#", "data-reveal-id" => "termsModal", :class => "button success"
 
 
 .map.l-map-top-of-page.opacity-0
@@ -47,7 +47,7 @@
     Drop off your new, unwrapped toys or sports equipment at 
     a Starbucks near you.
 
-#termsModel.reveal-modal
+#termsModal.reveal-modal
   .large OFFICIAL RULES
   %p
     NO PURCHASE NECESSARY TO ENTER OR WIN. PURCHASE WILL NOT INCREASE YOUR CHANCES OF WINNING. Yeti Media Promotion Sweepstakes (Sweepstakes) and these official rules are governed, construed and interpreted under the laws of the United States. Open and offered only to legal residents of the California who are eighteen (18) years of age and older at time of entry. Employees and their immediate families of Yeti Media and Starbucks its respective Internet, product and service providers, and their respective parent companies, trustees, subsidiaries, franchisees, affiliates, licensees, directors, officers, employees, agents, independent contractors and advertising and promotion agencies (collectively, the Sweepstakes Entities) are not eligible to enter this Sweepstakes. All federal, state, local laws and regulations apply. Void outside of the United States and DC, and where prohibited, taxed, licensed or restricted by law.
@@ -61,4 +61,5 @@
     DRAWING. Winners will be randomly selected from all eligible entries received. The random draw will be held on or about DEC 29th, 2012 at or around 12:00pm (PST). Odds of being randomly selected are determined by the number of eligible entries received during the Sweepstakes Period. Only one (1) entry per person/twittter account.
   %a.close-reveal-modal &#215;
 
-
+#aboutModal.reveal-modal
+  = render "about"
