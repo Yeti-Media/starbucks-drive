@@ -3,8 +3,8 @@ namespace :twitter do
   task :gather_tweets => :environment do
     followers = Twitter.follower_ids
     Twitter.search("##{Settings.twitter.hashtag} -rt").results.map do |tw|
-      if followers.include? tw.from_user_id 
-        tweet = Tweet.find_or_create_by(user_id: tw.from_user_id)
+      if followers.include? tw.user.id 
+        tweet = Tweet.find_or_create_by(user_id: tw.user.id )
         tweet.user = tw.from_user
         tweet.tweet_id = tw.id
         tweet.save
