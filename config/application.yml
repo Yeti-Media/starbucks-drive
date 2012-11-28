@@ -6,7 +6,7 @@ defaults: &defaults
     number: +5411133322
     body: placeholder for the sms text
   maps:
-    key: AIzaSyAS1bT4_6kSQvmuMqPdAdHD4Z6Au6fZ-PQ
+    key: AIzaSyBENRZVAXcgbYid8376aTCyxa87gF2ZNjQ
 
 development:
   <<: *defaults
