@@ -15,6 +15,9 @@
           %div.donate.panel.boxshadow.opacity-96
             %p We currently need more Toys for:
             .xl-type Kids ages 13 - 17
+            %p
+              = link_to "Suggested Donation Items", "#", "data-reveal-id" => "suggestModal", :class => "button"
+
         .row
           .five.columns.bg-color
             %p Current toys collected grouped by age:
@@ -53,9 +56,15 @@
   %p.margin-bottom-40.mobile-four.bg-color
     Drop off your new, unwrapped toys or sports equipment at
     a Starbucks near you.
+    %br/
+    = link_to "Spark of Love events", "#", "data-reveal-id" => "eventsModal", :class => "button"
 
 #termsModal.reveal-modal
   = render "rules"
 
 #aboutModal.reveal-modal
   = render "about"
+#suggestModal.reveal-modal
+  = render "suggestions"
+#eventsModal.reveal-modal
+  = render "events"
