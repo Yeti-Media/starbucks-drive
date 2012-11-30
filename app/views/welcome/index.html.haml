@@ -17,7 +17,10 @@
             .xl-type Kids ages 13 - 17
             %p
               = link_to "Suggested Donation Items", "#", "data-reveal-id" => "suggestModal", :class => "button"
-
+            %p.is_mobile
+              = link_to "Text ABC7 to donate $10", "sms:#{Settings.donation.number}", :class => "button alert"
+            %h5.is_not_mobile Text ABC7 to 80100 to donate $10
+            ABC7 Spark of Love is sponsored by the California Community Foundation.
         .row
           .five.columns.bg-color
             %p Current toys collected grouped by age:
