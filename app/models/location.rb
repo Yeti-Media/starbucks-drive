@@ -3,6 +3,8 @@ class Location
   include Mongoid::Document
   include Geocoder::Model::Mongoid
 
+  attr_accessor :gmaps
+
   geocoded_by :full_location, coordinates: :coords
 
   field :coords,  type: Array, default: [0,0]
@@ -48,6 +50,10 @@ class Location
   end
 
   def gmaps4rails_infowindow
+    full_location
+  end
+
+  def gmaps4rails_address
     full_location
   end
 
