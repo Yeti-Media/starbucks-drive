@@ -13,6 +13,7 @@ namespace :import do
                       zip_code: row[7],
                       phone_number: row[8])
       puts l.coords.to_s
+      sleep 5.seconds
     end
   end
 end
