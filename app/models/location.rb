@@ -57,9 +57,6 @@ class Location
     full_location
   end
 
-  def coords
-    read_attribute(:coords).reverse
-  end
 
   def full_location
     [address, city, state].join(', ')
