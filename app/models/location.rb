@@ -1,5 +1,4 @@
 class Location
-  include Gmaps4rails::ActsAsGmappable
   include Mongoid::Document
   include Geocoder::Model::Mongoid
 
@@ -16,8 +15,6 @@ class Location
   field :city, type: String
   field :state, type: String
   field :phone_number , type: String
-
-  acts_as_gmappable position: :coords
 
   index({ coords: "2d" }, { min: -200, max: 200 })
 

@@ -19,6 +19,8 @@
     %title Give to Spark of Love Thru Yeti Media and Starbucks
     / Included CSS Files
     = stylesheet_link_tag "application"
+    = javascript_include_tag '//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry'
+    = javascript_include_tag '//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js'
     %script{:type => "text/javascript", :src => "//use.typekit.net/dnl6osb.js"}
     %script{:type => "text/javascript"}
       try{Typekit.load();}catch(e){}
@@ -41,3 +43,4 @@
     .l-container.row
       = yield
     %script{:src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}
+  
