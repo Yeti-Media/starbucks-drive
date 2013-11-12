@@ -4,6 +4,8 @@ StarbucksDrive::Application.routes.draw do
 
 
   match '/tweets' , to: 'tweets#save_tweet'
+  match '/test', to: 'welcome#test'
+ 
  
   root :to => 'welcome#index'
 

@@ -46,15 +46,6 @@ class Location
     result
   end
 
-  def gmaps4rails_infowindow
-    full_location
-  end
-
-  def gmaps4rails_address
-    full_location
-  end
-
-
   def full_location
     [address, city, state].join(', ')
   end

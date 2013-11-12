@@ -56,7 +56,7 @@
 
 
 .map.l-map-top-of-page.opacity-0
-  #map
+  #map{style:"width:400px, height:400px;"}
   %p.margin-bottom-40.mobile-four.bg-color
     Drop off your new, unwrapped toys or sports equipment at
     a Starbucks near you.
@@ -64,15 +64,11 @@
     = link_to "Spark of Love events", "#", "data-reveal-id" => "eventsModal", :class => "button"
 
 :javascript
-  $(document).ready(function(){
-    console.log('START testting map');
-    var handler = Gmaps.build('Google');
-    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-      var markers = handler.addMarkers(#{raw @json.to_json});
-      handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-    });
-    console.log('END testting map');
+  var handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    var markers = handler.addMarkers(#{raw @json.to_json});
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
   });
 
 #termsModal.reveal-modal
