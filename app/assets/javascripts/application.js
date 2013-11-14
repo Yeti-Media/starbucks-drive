@@ -1,9 +1,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require donut_chart
-//= require raphael-min
-//= require morris.min
 //= require welcome
 //= require map
 //= require detect-mobile
