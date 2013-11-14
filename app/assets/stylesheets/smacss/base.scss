@@ -19,9 +19,15 @@ body {
   padding-top: 50px;
 }
 
-.xl-type { font-size: 400%; }
+.xl-type { 
+  font-family: $header-font;
+  font-size: 400%;
+}
 
-.large { font-size: 30px !important; }
+.large { 
+  font-family: $header-font;
+  font-size: 30px !important;
+}
 
 .bold {
     font-weight: bold;

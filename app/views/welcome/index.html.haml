@@ -6,10 +6,19 @@
   .seven.columns.centered
     %dl.tabs.mobile
       %dd.active
-        %a#toys_show.large{:href => "#toys"} Toys needed?
+        %a#map_show.large{:href => "#maptab"} Drop off locations >
       %dd
-        %a#map_show.large{:href => "#maptab"} Drop off locations
+        %a#toys_show.large{:href => "#toys"} Toys needed >
     %ul.tabs-content
+      %li#maptabTab
+        .row
+          .map
+            #map
+            %p.margin-bottom-40.mobile-four.bg-color
+              Drop off your new, unwrapped toys or sports equipment at
+              a Starbucks near you.
+              %br/
+              = link_to "Spark of Love events", "#", "data-reveal-id" => "eventsModal", :class => "button"
       %li#toysTab.active
         .row
           %div.donate.panel.boxshadow.opacity-96
@@ -22,8 +31,6 @@
             %p Current toys collected grouped by age:
           .seven.columns.panel.boxshadow
             #donut_chart.chart
-      %li#maptabTab
-        .row
 .row.margin-0
   .seven.column.centered.panel.boxshadow.opacity-96
     %p
@@ -53,15 +60,6 @@
       = link_to (image_tag "yetilogo.png"), "http://yeti-media.com", :target => "_blank"
     .three.columns
       = image_tag "sblogo.png"
-
-
-.map.l-map-top-of-page.opacity-0
-  #map{style:"width:400px, height:400px;"}
-  %p.margin-bottom-40.mobile-four.bg-color
-    Drop off your new, unwrapped toys or sports equipment at
-    a Starbucks near you.
-    %br/
-    = link_to "Spark of Love events", "#", "data-reveal-id" => "eventsModal", :class => "button"
 
 :javascript
   var handler = Gmaps.build('Google');
