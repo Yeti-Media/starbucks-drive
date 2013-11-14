@@ -10,7 +10,7 @@
       %dd
         %a#toys_show.large{:href => "#toys"} Toys needed >
     %ul.tabs-content
-      %li#maptabTab
+      %li#maptabTab.active
         .row
           .map
             #map
@@ -19,18 +19,20 @@
               a Starbucks near you.
               %br/
               = link_to "Spark of Love events", "#", "data-reveal-id" => "eventsModal", :class => "button"
-      %li#toysTab.active
+      %li#toysTab
         .row
           %div.donate.panel.boxshadow.opacity-96
             %p We currently need more Toys for:
             .xl-type Kids ages 13 - 17
             %p
               = link_to "Suggested Donation Items", "#", "data-reveal-id" => "suggestModal", :class => "button"
-        .row
-          .five.columns.bg-color
-            %p Current toys collected grouped by age:
-          .seven.columns.panel.boxshadow
-            #donut_chart.chart
+.row.margin-0
+  .seven.column.centered.panel.boxshadow.mobile-four
+    %p
+      Tweet that "You've Donated" with the hash tag #TeamSpark and
+      follow @yeti_media to be entered to win a free Starbucks Gift card valued at $25.
+    .twitter
+      %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet to Win              
 .row.margin-0
   .seven.column.centered.panel.boxshadow.opacity-96
     %p
@@ -42,13 +44,6 @@
     %p
       %a.pin-it-button{"count-layout" => "horizontal", :href => "http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fyeti-media.com&media=http%3A%2F%2Fgivethruyeti.com%2Fassets%2FSPARK-OF-LOVE-LOGO-2012-29400d636d2327f7fa02c3c9e966447a.PNG&description=Starbucks%20and%20Yeti%20Media%20are%20partnering%20with%20ABC7%20and%20SoCal%20Fire%20Fighters%20Spark%20of%20love%20this%20holiday%20season%20by%20hosting%20a%20Toy%20Drive."}
         %img{:border => "0", :src => "//assets.pinterest.com/images/PinExt.png", :title => "Pin It"}/
-.row.margin-0
-  .seven.column.centered.panel.boxshadow.mobile-four
-    %p
-      Tweet that "You've Donated" with the hash tag #TeamSpark and
-      follow @yeti_media to be entered to win a free Starbucks Gift card valued at $25.
-    .twitter
-      %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"} Tweet to Win
 .row.margin-0.about-button
   = link_to "About this campaign" , "#", "data-reveal-id" => "aboutModal", :class => "button"
 .row.margin-0.about-button
