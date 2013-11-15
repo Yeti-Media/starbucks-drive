@@ -3,8 +3,6 @@
 //= require foundation
 //= require welcome
 //= require map
-//= require detect-mobile
-//= require mobile
 //= require underscore
 //= require gmaps/google
 //= require skrollr.min
