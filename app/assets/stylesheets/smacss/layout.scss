@@ -2,11 +2,8 @@
 @import "modules/mixins";
 
 .l-container {
-	background: #9acd68 url(image-path("desktop1040elfwishlist.jpeg")) no-repeat;
+  background: transparent url(image-path("")) no-repeat;
   min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
 }
 
 .l-map-top-of-page {

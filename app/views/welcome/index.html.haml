@@ -4,30 +4,24 @@
 
 .row.margin-0
   .seven.columns.centered
-    %dl.tabs.mobile
-      %dd.active
-        %a#map_show.large{:href => "#maptab"} Drop off locations >
-      %dd
-        %a#toys_show.large{:href => "#toys"} Toys needed >
-    %ul.tabs-content
-      %li#maptabTab.active
-        .row
-          .map
-            #map
-            %p.margin-bottom-40.mobile-four.bg-color
-              Drop off your new, unwrapped toys or sports equipment at
-              a Starbucks near you.
-              %br/
-              = link_to "Spark of Love events", "#", "data-reveal-id" => "eventsModal", :class => "button"
-      %li#toysTab
-        .row
-          %div.donate.panel.boxshadow.opacity-96
-            %p We currently need more Toys for:
-            .xl-type Kids ages 13 - 17
-            %p
-              = link_to "Suggested Donation Items", "#", "data-reveal-id" => "suggestModal", :class => "button"
+    .row
+      .map
+        #map
+        %p.margin-bottom-40.mobile-four.bg-color
+          Drop off your new, unwrapped toys or sports equipment at
+          a Starbucks near you.
+          %br/
+          = link_to "Spark of Love events", "#", "data-reveal-id" => "eventsModal", :class => "button"
+.row.margin-0          
+  .seven.columns.centered
+    .row
+      %div.donate.panel.opacity-96
+        %p We currently need more Toys for:
+        .xl-type Kids ages 13 - 17
+        %p
+          = link_to "Suggested Donation Items", "#", "data-reveal-id" => "suggestModal", :class => "button"
 .row.margin-0
-  .seven.column.centered.panel.boxshadow.mobile-four
+  .seven.column.centered.panel.mobile-four
     %p
       Tweet that "You've Donated" with the hash tag #TeamSpark and
       follow @yeti_media to be entered to win a free Starbucks Gift card valued at $25.
@@ -36,7 +30,7 @@
       %a.twitter-follow-button{href: "https://twitter.com/Yeti_Media", "data-show-count" => "false", "data-size" => "large"}
         Follow @Yeti_Media        
 .row.margin-0
-  .seven.column.centered.panel.boxshadow.opacity-96
+  .seven.column.centered.panel.opacity-96
     %p
       With every new, unwrapped toy, or sports equipment valued at $10 or more you will receive
       one free Verismo latte.*
