@@ -7,4 +7,4 @@
 //= require mobile
 //= require underscore
 //= require gmaps/google
-//= require skroller
+//= require skrollr.min
