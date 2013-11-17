@@ -1,25 +1,19 @@
 @import "modules/mixins";
 
 @include responsive-sass(max-width, 479px) {
-  body {padding-top: 0}
   .l-container {
     background-image: url(image-path(""));
-    padding-top: 100px;
   }
 }
 
 @include responsive-sass(min-width, 480px) {
-  body {padding-top: 0}
   .l-container {
-    padding-top: 165px;
     background-image: url(image-path(""));
   }
 }
 
 @include responsive-sass(min-width, 768px) {
-  body {padding-top: 50px}
   .l-container {
-    padding-top: 210px;
     background-image: url(image-path(""));
   }
   .map_container {
@@ -29,7 +23,6 @@
 
 @include iphone5-landscape {
   .l-container {
-    padding-top: 200px;
     background-image: url(image-path(""));
   }
   .bg-color {
@@ -40,7 +33,6 @@
 @include ipad-landscape {
   .row {margin: 0}
   .l-container {
-    padding-top: 200px;
     background-image: url(image-path(""));
   }
   .bg-color {
@@ -58,5 +50,11 @@
   }
   .about-button .button {
     width: 100%;
+  }
+}
+
+@include responsive-sass(max-width, 767px) {
+  .sb-logo {
+    height: 500px
   }
 }

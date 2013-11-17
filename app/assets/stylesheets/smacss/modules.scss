@@ -1,23 +1,6 @@
-.tabs dd.active, .tabs li.active {
-	border-top: 5px solid red;
-}
-
-.tabs.mobile dd:first-child, .tabs.mobile li:first-child {
-	padding-left: 0px !important;
-}
-
-.tabs {
-	margin-top: 50px;
-}
-
-.chart {
-	height: 230px;
-	width: 230px;
-}
-
 .map img, object, embed {
-	overflow-x: hidden;
-	max-width: none; 
+  overflow-x: hidden;
+  max-width: none; 
 }
 
 #map {
@@ -30,5 +13,40 @@
 }
 
 .fb_edge_widget_with_comment { 
-	height: 20px !important; overflow: hidden; 
+  height: 20px !important; overflow: hidden; 
+}
+
+[data-role=navigation] {
+  ul.breadcrumbs {
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+ul.breadcrumbs {
+  li { 
+    padding: 0 6px 0 0;
+    a {
+      font-size: 1.5rem !important;
+      padding-left: 6px;
+    }
+  }  
+}
+
+.snow-man {
+  position: relative; 
+}
+
+.clear-skrollr {
+  position: absolute;
+  z-index: 9999;
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+  clear: both;
 }

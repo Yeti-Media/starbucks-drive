@@ -1,6 +1,7 @@
 @import "modules/constants";
 @import "modules/mixins";
 @import "compass/css3";
+@import "compass/utilities";
 
 
 html {
@@ -10,14 +11,14 @@ html {
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
   height: 100%;
   background: transparent url(image-path("Background.jpg"));
   color: $font-color;
   font-family: $font-family;
   font-size: 18px;
-  padding-top: 50px;
   @include background-size(100%, auto);
+  @include text-shadow(0 0.1rem #f5f4f4);
 }
 
 .xl-type { 
@@ -36,6 +37,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font;
+  font-weight: normal;
 }
 
 small {
@@ -53,14 +55,38 @@ small {
   margin-bottom: 40px;
 }
 
+.m-t-b-30 {
+  margin: 30px 0;
+}
+
 .opacity-0 {
-  display: hidden;
 	@include opacity(0);
+}
+
+.padding {
+  padding: 10px;
+}
+
+.header-bg {
+  background-color: rgba(153,153,153, 0.4);
 }
 
 p {
 	font-size: 20px;
 	line-height: 1.444;
+}
+
+.button {
+  font-size: 16px;
+  @include text-shadow(0 0.1rem #666);
+}
+
+ul {
+  font-size: 18px;
+}
+
+ul.horizontal {
+  @include horizontal-list;
 }
 
 .boxshadow {
@@ -75,4 +101,23 @@ p {
 
 .margin-0 {
   margin: 0 !important;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
+}
+
+.m-t-5 {
+  margin-top: 5px;
+}
+
+.bg-green {
+  background-color: rgba(93, 164, 35, 0.5);
+}
+.fixed {
+  position: fixed;
+}
+
+.height-300 {
+  height: 300px
 }

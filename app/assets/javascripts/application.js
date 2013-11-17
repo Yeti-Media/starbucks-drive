@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery_ujs
+//= require picturefill
 //= require foundation
 //= require welcome
 //= require map
