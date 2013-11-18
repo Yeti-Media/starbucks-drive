@@ -6,3 +6,6 @@
 //= require underscore
 //= require gmaps/google
 //= require skrollr.min
+//= require skrollr.menu.min
+//= require fastclick
+//= require main

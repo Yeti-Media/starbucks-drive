@@ -4,30 +4,26 @@
 
 .row.margin-0
   .seven.columns.centered
-    %dl.tabs.mobile
-      %dd.active
-        %a#map_show.large{:href => "#maptab"} Drop off locations >
-      %dd
-        %a#toys_show.large{:href => "#toys"} Toys needed >
-    %ul.tabs-content
-      %li#maptabTab.active
-        .row
-          .map
-            #map
-            %p.margin-bottom-40.mobile-four.bg-color
-              Drop off your new, unwrapped toys or sports equipment at
-              a Starbucks near you.
-              %br/
-              = link_to "Spark of Love events", "#", "data-reveal-id" => "eventsModal", :class => "button"
-      %li#toysTab
-        .row
-          %div.donate.panel.boxshadow.opacity-96
-            %p We currently need more Toys for:
-            .xl-type Kids ages 13 - 17
-            %p
-              = link_to "Suggested Donation Items", "#", "data-reveal-id" => "suggestModal", :class => "button"
+    .row
+      %h2 Drop off locations
+      .map
+        #map
+        %p.margin-bottom-40.mobile-four.bg-color
+          Drop off your new, unwrapped toys or sports equipment at
+          a Starbucks near you.
+          %br/
+          = link_to "Spark of Love events", "#", "data-reveal-id" => "eventsModal", :class => "button"
+.row.margin-0          
+  .seven.columns.centered
+    .row
+      .large Toys needed
+      %div.donate.panel.opacity-96
+        %p We currently need more Toys for:
+        .xl-type Kids ages 13 - 17
+        %p
+          = link_to "Suggested Donation Items", "#", "data-reveal-id" => "suggestModal", :class => "button"
 .row.margin-0
-  .seven.column.centered.panel.boxshadow.mobile-four
+  .seven.column.centered.panel.mobile-four
     %p
       Tweet that "You've Donated" with the hash tag #TeamSpark and
       follow @yeti_media to be entered to win a free Starbucks Gift card valued at $25.
@@ -36,7 +32,7 @@
       %a.twitter-follow-button{href: "https://twitter.com/Yeti_Media", "data-show-count" => "false", "data-size" => "large"}
         Follow @Yeti_Media        
 .row.margin-0
-  .seven.column.centered.panel.boxshadow.opacity-96
+  .seven.column.centered.panel.opacity-96
     %p
       With every new, unwrapped toy, or sports equipment valued at $10 or more you will receive
       one free Verismo latte.*
@@ -57,32 +53,6 @@
       = link_to (image_tag "yetilogo.png"), "http://yeti-media.com", :target => "_blank"
     .three.columns
       = image_tag "sblogo.png"
-:javascript
-  $(document).ready(function(){
-    var handler = Gmaps.build('Google');
-    handler.buildMap({ provider: {zoom: 16}, internal: {id: 'map'}, clusterer:{maxZoom: 18}}, function(){
-      var markers = handler.addMarkers(#{raw @json.to_json});
-      handler.bounds.extendWith(markers);
-      if (window.navigator.geolocation) {
-        var failure, success;
-        success = function(position) {
-          handler.addMarkers([{lat: position.coords.latitude , lng: position.coords.longitude, infowindow: "Here I am!"}]);
-          handler.map.centerOn({ lat: position.coords.latitude, lng: position.coords.longitude });  
-        };
-        failure = function(message) {
-          handler.fitMapToBounds();
-        };
-        navigator.geolocation.getCurrentPosition(success, failure, {
-          maximumAge: Infinity,
-          timeout: 5000
-        }); 
-      }
-      console.log(markers);
-      var mcOptions = {gridSize: 20, maxZoom: 16};
-      //var mc = new MarkerClusterer(handler.getMap(), handler.map.markers, mcOptions);
-    });
-  });
-
 #termsModal.reveal-modal
   = render "rules"
 
