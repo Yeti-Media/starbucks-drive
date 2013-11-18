@@ -24,7 +24,6 @@ $ ->
     if $('html').hasClass('touch')
       s.destroy()
       $('#skrollr-body').attr('style', 'overflow: hidden; height: auto; background-position: 0px 0px;')
-      console.log "die"
 
   init_skrollr()
   
