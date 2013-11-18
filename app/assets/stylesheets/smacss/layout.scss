@@ -2,7 +2,6 @@
 @import "modules/mixins";
 
 .l-container {
-  background: transparent url(image-path("")) no-repeat;
   min-height: 100%;
 }
 
@@ -10,4 +9,9 @@
   position: absolute;
   top: -500px;
 
+}
+
+header {
+  width: 100%;
+  margin-bottom: 15px
 }

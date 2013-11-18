@@ -19,13 +19,11 @@
     %title Give to Spark of Love Thru Yeti Media and Starbucks
     / Included CSS Files
     = stylesheet_link_tag "application"
-    = javascript_include_tag '//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry'
-    = javascript_include_tag '//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js'
     %script{:type => "text/javascript", :src => "//use.typekit.net/tzl1sgs.js"}
     %script{:type => "text/javascript"}
       try{Typekit.load();}catch(e){}
     = csrf_meta_tags
-  %body{"data-0" => "background-position:0px 0px;", "data-1000" => "background-position:0px -300px;"}
+  %body{"data-0" => "background-position:0px 0px;", "data-2000" => "background-position:0px 1000px;"}
     :plain
       <div id="fb-root"></div>
       <script>(function(d, s, id) {
@@ -34,10 +32,27 @@
       js = d.createElement(s); js.id = id;
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=468578209843897";
       fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-    .l-container.row
-      = yield
+      }(document, 'script', 'facebook-jssdk'));</script>  
+    #skrollr-body
+      = render "nav"
+      .l-container.row
+        = yield
+    / Modals
+    #termsModal.reveal-modal
+      = render "rules"
+    #aboutModal.reveal-modal
+      = render "about"
+    #suggestModal.reveal-modal
+      = render "suggestions"
+    #eventsModal.reveal-modal
+      = render "events"
+    #enterModal.reveal-modal
+      = render "enter-to-win"
+    #mapModal.reveal-modal
+      = render "map"    
     / Included JS Files
+    = javascript_include_tag '//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry'
+    = javascript_include_tag '//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js'
     = javascript_include_tag "application"
     :javascript
       $(document).ready(function(){
@@ -64,8 +79,3 @@
           //var mc = new MarkerClusterer(handler.getMap(), handler.map.markers, mcOptions);
         });
       });
-
-
-    %script{:src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}
-
-  

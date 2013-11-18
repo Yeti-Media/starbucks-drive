@@ -1,37 +1,28 @@
 @import "modules/mixins";
 
-@include responsive-sass(max-width, 479px) {
-  body {padding-top: 0}
-  .l-container {
-    background-image: url(image-path(""));
-    padding-top: 100px;
-  }
-}
 
-@include responsive-sass(min-width, 480px) {
-  body {padding-top: 0}
-  .l-container {
-    padding-top: 165px;
-    background-image: url(image-path(""));
+@include responsive-sass(max-width, 480px) {
+  .reveal-modal,
+  .reveal-modal.small,
+  .reveal-modal.medium,
+  .reveal-modal.large,
+  .reveal-modal.xlarge {
+    width: 100%;
+    top: 15px;
+    left: 50%;
+    margin-left: -50%;
+    padding: 20px;
+    height: auto;
   }
 }
 
 @include responsive-sass(min-width, 768px) {
-  body {padding-top: 50px}
-  .l-container {
-    padding-top: 210px;
-    background-image: url(image-path(""));
-  }
   .map_container {
     width: 571px;
   }
 }
 
 @include iphone5-landscape {
-  .l-container {
-    padding-top: 200px;
-    background-image: url(image-path(""));
-  }
   .bg-color {
     background-color: #9acd68;
   }
@@ -39,10 +30,6 @@
 
 @include ipad-landscape {
   .row {margin: 0}
-  .l-container {
-    padding-top: 200px;
-    background-image: url(image-path(""));
-  }
   .bg-color {
     background-color: transparent !important;
   }
@@ -58,5 +45,11 @@
   }
   .about-button .button {
     width: 100%;
+  }
+}
+
+@include responsive-sass(max-width, 767px) {
+  .sb-logo {
+    height: 500px
   }
 }

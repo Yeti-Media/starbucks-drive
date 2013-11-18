@@ -1,7 +1,7 @@
 defaults: &defaults
   twitter:
     hashtag: TeamSpark
-    text: Donate to Spark of Love to get a free Verismo latte. Find a @starbucks store near you http://givethruyeti.com
+    text: Donate to Spark of Love to get a free Verismo latte. Find a @starbucks store near you http://givethruyeti.com via @Yeti_Media
   donation:
     number: 80100
     body: ABC7
