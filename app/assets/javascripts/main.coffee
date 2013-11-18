@@ -65,3 +65,4 @@ $ ->
       open: window.map_render
       opened: kill_skrollr
       closed: init_skrollr
+    google.maps.event.trigger(map, "resize")
