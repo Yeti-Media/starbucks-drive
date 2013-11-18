@@ -59,8 +59,9 @@ $ ->
       opened: kill_skrollr
       closed: init_skrollr
 
-  # $('.map').focusin ->
-  #   kill_skrollr()
-
-  # $('.map').on 'blur', ->
-  #   init_skrollr()
+  $('[data-id="mapModal"]').click (e) ->
+    e.preventDefault()
+    $('#mapModal').reveal
+      open: window.map_render
+      opened: kill_skrollr
+      closed: init_skrollr

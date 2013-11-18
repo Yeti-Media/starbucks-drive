@@ -47,8 +47,8 @@ small {
 .opacity-100 {
 	@include opacity(100);
 }
-.opacity-96 {
-  @include opacity(0.96);
+.opacity{
+  @include opacity(0.89);
 }
 
 .margin-bottom-40 {

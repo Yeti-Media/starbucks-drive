@@ -47,31 +47,34 @@
     #eventsModal.reveal-modal
       = render "events"
     #enterModal.reveal-modal
-      = render "enter-to-win"   
+      = render "enter-to-win"
+    #mapModal.reveal-modal
+      = render "map"    
     / Included JS Files
     = javascript_include_tag '//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry'
     = javascript_include_tag '//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js'
     = javascript_include_tag "application"
     :javascript
       $(document).ready(function(){
-        var handler = Gmaps.build('Google');
-        handler.buildMap({ provider: {zoom: 16}, internal: {id: 'map'}}, function(){
-          var markers = handler.addMarkers(#{raw @json.to_json});
-          handler.bounds.extendWith(markers);
-          if (window.navigator.geolocation) {
-            var failure, success;
-            success = function(position) {
-              handler.map.centerOn({ lat: position.coords.latitude, lng: position.coords.longitude });  
-            };
-            failure = function(message) {
-              alert('Cannot retrieve location!');
-            };
-            navigator.geolocation.getCurrentPosition(success, failure, {
-              maximumAge: Infinity,
-              timeout: 5000
-            }); 
-          }          
-        });
+        window.map_render = function (){
+          var handler = Gmaps.build('Google');
+          handler.buildMap({ provider: {zoom: 16}, internal: {id: 'map'}}, function(){
+            var markers = handler.addMarkers(#{raw @json.to_json});
+            handler.bounds.extendWith(markers);
+            if (window.navigator.geolocation) {
+              var failure, success;
+              success = function(position) {
+                handler.map.centerOn({ lat: position.coords.latitude, lng: position.coords.longitude });  
+              };
+              failure = function(message) {
+                alert('Cannot retrieve location!');
+              };
+              navigator.geolocation.getCurrentPosition(success, failure, {
+                maximumAge: Infinity,
+                timeout: 5000
+              }); 
+            }          
+        });}
       });
 
   

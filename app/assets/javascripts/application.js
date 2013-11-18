@@ -1,6 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require jquery.tap.min
 //= require picturefill
 //= require foundation
 //= require welcome

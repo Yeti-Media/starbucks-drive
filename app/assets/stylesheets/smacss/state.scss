@@ -1,9 +1,18 @@
 @import "modules/mixins";
 
 
-@include responsive-sass(min-width, 480px) {
-  .l-container {
-    background-image: url(image-path(""));
+@include responsive-sass(max-width, 480px) {
+  .reveal-modal,
+  .reveal-modal.small,
+  .reveal-modal.medium,
+  .reveal-modal.large,
+  .reveal-modal.xlarge {
+    width: 100%;
+    top: 15px;
+    left: 50%;
+    margin-left: -50%;
+    padding: 20px;
+    height: auto;
   }
 }
 
