@@ -1,10 +1,5 @@
 @import "modules/mixins";
 
-@include responsive-sass(max-width, 479px) {
-  .l-container {
-    background-image: url(image-path(""));
-  }
-}
 
 @include responsive-sass(min-width, 480px) {
   .l-container {
@@ -13,18 +8,12 @@
 }
 
 @include responsive-sass(min-width, 768px) {
-  .l-container {
-    background-image: url(image-path(""));
-  }
   .map_container {
     width: 571px;
   }
 }
 
 @include iphone5-landscape {
-  .l-container {
-    background-image: url(image-path(""));
-  }
   .bg-color {
     background-color: #9acd68;
   }
@@ -32,9 +21,6 @@
 
 @include ipad-landscape {
   .row {margin: 0}
-  .l-container {
-    background-image: url(image-path(""));
-  }
   .bg-color {
     background-color: transparent !important;
   }

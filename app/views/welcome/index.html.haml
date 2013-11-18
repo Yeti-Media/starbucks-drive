@@ -16,24 +16,13 @@
   .seven.columns.centered
     .row
       %h2.header-bg Drop off locations
-      .map
-        #map
+      .map{tabindex: 0}
+        / #map
         %p.margin-bottom-40.mobile-four.bg-color
           Drop off your new, unwrapped toys or sports equipment at
           a Starbucks near you.
           %br/
-          = link_to "Spark of Love events", "#", "data-reveal-id" => "eventsModal", :class => "button m-t-5"
-.row.margin-0#enter-to-win
-  .seven.columns.centered
-    .row
-      %h2.header-bg Enter to win
-.row.margin-0
-  .seven.column.centered.panel
-    %p
-      Tweet that "You've Donated" with the hash tag #TeamSpark and
-      follow @yeti_media to be entered to win a free Starbucks Gift card valued at $25.
-    .twitter
-      %a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"}
+          = link_to "Spark of Love events", "#", "data-id" => "eventsModal", :class => "button m-t-5"
 .row.margin-0         
   .seven.columns.centered
     .row#toys
@@ -42,13 +31,13 @@
         %p We currently need more Toys for:
         .xl-type Kids ages 13 - 17
         %p
-          = link_to "Suggested Donation Items", "#", "data-reveal-id" => "suggestModal", :class => "button m-t-5"
+          = link_to "Suggested Donation Items", "#", "data-id" => "suggestModal", :class => "button m-t-5"
         %p
-          .fb-like{"data-href" => "http://givethruyeti.com", "data-send" => "false", "data-show-faces" => "false", "data-width" => "100", "data-layout" => "button_count"}  
+        / .fb-like{"data-href" => "http://givethruyeti.com", "data-send" => "false", "data-show-faces" => "false", "data-width" => "100", "data-layout" => "button_count"}  
 .row.margin-0.about-button
-  = link_to "About this campaign" , "#", "data-reveal-id" => "aboutModal", :class => "button"
+  = link_to "About this campaign" , "#", "data-id" => "aboutModal", :class => "button"
 .row.margin-0.about-button
-  = link_to "Rules", "#", "data-reveal-id" => "termsModal", :class => "button success"
+  = link_to "Rules", "#", "data-id" => "termsModal", :class => "button success"
 .row.margin-0
   .six.columns.centered
     %P Sponsored by:
@@ -56,12 +45,3 @@
       = link_to (image_tag "yetilogo.png"), "http://yeti-media.com", :target => "_blank"
     .three.columns.mobile-four.sb-logo
       = image_tag "sblogo.png"
-
-#termsModal.reveal-modal
-  = render "rules"
-#aboutModal.reveal-modal
-  = render "about"
-#suggestModal.reveal-modal
-  = render "suggestions"
-#eventsModal.reveal-modal
-  = render "events"

@@ -33,10 +33,22 @@
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=468578209843897";
       fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
+    /%a.twitter-hashtag-button{:href => "https://twitter.com/intent/tweet?button_hashtag=#{Settings.twitter.hashtag}&text=#{Settings.twitter.text}", "data-size" => "large", "data-related" => "yeti_media,starbucks"}    
     #skrollr-body
-      = render "welcome/nav"
+      = render "nav"
       .l-container.row
         = yield
+    / Modals
+    #termsModal.reveal-modal
+      = render "rules"
+    #aboutModal.reveal-modal
+      = render "about"
+    #suggestModal.reveal-modal
+      = render "suggestions"
+    #eventsModal.reveal-modal
+      = render "events"
+    #enterModal.reveal-modal
+      = render "map"   
     / Included JS Files
     = javascript_include_tag '//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry'
     = javascript_include_tag '//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js'
@@ -59,9 +71,8 @@
               maximumAge: Infinity,
               timeout: 5000
             }); 
-          }
+          }          
         });
       });
-    %script{:src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}
 
   
