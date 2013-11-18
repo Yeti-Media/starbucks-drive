@@ -57,7 +57,7 @@
     :javascript
       $(document).ready(function(){
         var handler = Gmaps.build('Google');
-        handler.buildMap({ provider: {zoom: 16}, internal: {id: 'map'}, clusterer:{maxZoom: 18}}, function(){
+        handler.buildMap({ provider: {zoom: 13}, internal: {id: 'map'}, clusterer:{maxZoom: 18}}, function(){
           var markers = handler.addMarkers(#{raw @json.to_json});
           handler.bounds.extendWith(markers);
           if (window.navigator.geolocation) {
