@@ -76,6 +76,7 @@
           }
           console.log(markers);
           var mcOptions = {gridSize: 20, maxZoom: 16};
-          //var mc = new MarkerClusterer(handler.getMap(), handler.map.markers, mcOptions);
+          window.map = handler.getMap();
+          var mc = new MarkerClusterer(window.map, handler.map.markers, mcOptions);
         });
       });
