@@ -65,6 +65,6 @@ $ ->
       open: window.map_render
       opened: kill_skrollr
       closed: init_skrollr
-    center = map.getCenter()
-    google.maps.event.trigger(map, "resize")
-    map.setCenter(center)
+    center = window.map.getCenter()
+    google.maps.event.trigger(window.map, "resize")
+    window.map.setCenter(center)
