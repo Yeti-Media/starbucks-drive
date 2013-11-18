@@ -1,5 +1,6 @@
 $ ->
-  window.history.pushState('', '', window.location.pathname)
+  if (window.history.pushState)
+    window.history.pushState('', '', window.location.pathname)
   FastClick.attach(document.body)
 
   #The options (second parameter) are all optional. The values shown are the default values.
