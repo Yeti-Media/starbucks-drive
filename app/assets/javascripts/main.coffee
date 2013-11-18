@@ -5,7 +5,7 @@ $ ->
   #The options (second parameter) are all optional. The values shown are the default values.
   init_skrollr = ->
     @s = skrollr.init
-      forceHeight: false
+      forceHeight: true
     skrollr.menu.init s,
       
       #skrollr will smoothly animate to the new position using `animateTo`.
