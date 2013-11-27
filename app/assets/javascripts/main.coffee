@@ -1,11 +1,12 @@
 $ ->
-  window.history.pushState('', '', window.location.pathname)
+  if (window.history.pushState)
+    window.history.pushState('', '', window.location.pathname)
   FastClick.attach(document.body)
 
   #The options (second parameter) are all optional. The values shown are the default values.
   init_skrollr = ->
     @s = skrollr.init
-      forceHeight: false
+      forceHeight: true
     skrollr.menu.init s,
       
       #skrollr will smoothly animate to the new position using `animateTo`.
@@ -24,7 +25,6 @@ $ ->
     if $('html').hasClass('touch')
       s.destroy()
       $('#skrollr-body').attr('style', 'overflow: hidden; height: auto; background-position: 0px 0px;')
-      console.log "die"
 
   init_skrollr()
   
