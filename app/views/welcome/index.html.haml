@@ -1,6 +1,6 @@
 .row.m-b-10
   .columns.centered.l-spark-logo{"data-0" => "width: 80%; opacity: 1", "data-300" => "width: 83%; opacity: 0"}
-    = image_tag "SPARK-OF-LOVE-LOGO-2012.PNG"
+    = image_tag "SPARK-OF-LOVE-LOGO-2012.PNG", alt: "Spark of Love", title: "Spark of Love"
 .row.margin-0
   .seven.columns.centered
     .row
@@ -14,7 +14,7 @@
         %span{data: {'src' => 'assets/snowmanDT1280.png'}}
 .row.margin-0#locations
   .seven.columns.centered
-    .row
+    .row{title: "Find a Starbucks location near you to donate to Spark of Love"}
       %h2.header-bg Drop off locations
       .map.panel.opacity
         %p.margin-bottom-40
@@ -43,6 +43,6 @@
   .six.columns.centered
     %P Sponsored by:
     .six.columns.mobile-four
-      = link_to (image_tag "yetilogo.png"), "http://yeti-media.com", :target => "_blank"
+      = link_to (image_tag "yetilogo.png", alt: "Yeti Media", title: "Yeti Media"), "http://yeti-media.com", :target => "_blank"
     .three.columns.mobile-four.sb-logo
-      = image_tag "sblogo.png"
+      = image_tag "sblogo.png", alt: "Starbucks", title: "Starbucks"
